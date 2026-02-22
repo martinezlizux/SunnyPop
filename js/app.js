@@ -32,31 +32,42 @@ async function getCityName(lat, lon) {
     }
 }
 
+function getRandomItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function getColdCharacter(currentTemp) {
+    if (currentTemp > 10 && currentTemp <= 20) {
+        return 'frio-bajo.png';
+    }
+    return getRandomItem(['frio1.png', 'frio2.png']);
+}
+
 function getThemeAndAssets(code, currentTemp) {
     if (code === 96 || code === 99) {
         return { theme: 'granizo', personaje: 'nieve.png', elemento: 'nieve.svg' };
     } else if (code >= 95) {
-        return { theme: 'tormenta', personaje: 'lluvia.png', elemento: 'trueno.svg' };
+        return { theme: 'tormenta', personaje: getRandomItem(['lluvia.png', 'lluvia2.png']), elemento: 'trueno.svg' };
     } else if (code >= 71 && code <= 86) {
         return { theme: 'nieve', personaje: 'nieve.png', elemento: 'nieve.svg' };
     } else if (code === 51 || code === 56 || code === 61 || code === 66 || code === 80) {
-        return { theme: 'lluvia-baja', personaje: 'lluvia.png', elemento: 'lluvia.svg' };
+        return { theme: 'lluvia-baja', personaje: getRandomItem(['lluvia.png', 'lluvia2.png']), elemento: 'lluvia.svg' };
     } else if (code === 53 || code === 63 || code === 81) {
-        return { theme: 'lluvia-moderada', personaje: 'lluvia.png', elemento: 'lluvia.svg' };
+        return { theme: 'lluvia-moderada', personaje: getRandomItem(['lluvia.png', 'lluvia2.png']), elemento: 'lluvia.svg' };
     } else if (code === 55 || code === 57 || code === 65 || code === 67 || code === 82) {
-        return { theme: 'lluvia-alta', personaje: 'lluvia.png', elemento: 'lluvia.svg' };
+        return { theme: 'lluvia-alta', personaje: getRandomItem(['lluvia.png', 'lluvia2.png']), elemento: 'lluvia.svg' };
     } else if (code >= 45 && code <= 48) {
         if (currentTemp > 20) {
-            return { theme: 'niebla-calor', personaje: 'Sol.png', elemento: 'nube.svg' };
+            return { theme: 'niebla-calor', personaje: getRandomItem(['Sol.png', 'sol2.png', 'sol3.png']), elemento: 'nube.svg' };
         }
-        return { theme: 'niebla', personaje: 'frio1.png', elemento: 'nube.svg' };
+        return { theme: 'niebla', personaje: getColdCharacter(currentTemp), elemento: 'nube.svg' };
     } else if (code === 2 || code === 3) {
-        return { theme: 'nublado', personaje: 'frio2.png', elemento: 'nublado.svg' };
+        return { theme: 'nublado', personaje: getColdCharacter(currentTemp), elemento: 'nublado.svg' };
     } else {
         if (currentTemp <= 10) {
-            return { theme: 'viento', personaje: 'frio1.png', elemento: 'viento.svg' };
+            return { theme: 'viento', personaje: getColdCharacter(currentTemp), elemento: 'viento.svg' };
         }
-        return { theme: 'sol', personaje: 'Sol.png', elemento: 'sol.svg' };
+        return { theme: 'sol', personaje: getRandomItem(['Sol.png', 'sol2.png', 'sol3.png']), elemento: 'sol.svg' };
     }
 }
 
@@ -79,6 +90,7 @@ async function getWeatherData(lat, lon) {
         if (!isDay) {
             document.body.classList.add('is-night');
             appearance.elemento = 'luna.svg'; // Fuerza al icono de luna
+            appearance.personaje = 'pijama.png'; // Fuerza pijama en la noche
         } else {
             document.body.classList.remove('is-night');
         }
