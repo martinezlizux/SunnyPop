@@ -157,3 +157,11 @@
     --colors-forecast-icon: var(--morado-80);
     --colors-forecast-colorbox: var(--amarillo-40);
 }
+
+/* --- Sobrescribir tema por defecto cuando es de noche --- */
+body.is-night {
+    --colors-forecast-background: var(--morado-100) !important;
+    --colors-forecast-type: var(--morado-10) !important;
+    --colors-forecast-icon: var(--morado-10) !important;
+    --colors-forecast-colorbox: var(--morado-80) !important;
+}

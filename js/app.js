@@ -74,6 +74,15 @@ async function getWeatherData(lat, lon) {
 
         // Aplicar temas y assets
         const appearance = getThemeAndAssets(currentCode, currentTemp);
+
+        // Sobrescribir interfaz si es de noche
+        if (!isDay) {
+            document.body.classList.add('is-night');
+            appearance.elemento = 'luna.svg'; // Fuerza al icono de luna
+        } else {
+            document.body.classList.remove('is-night');
+        }
+
         document.body.setAttribute('data-theme', appearance.theme);
         document.body.className = document.body.className.replace(/theme-\w+/, `theme-${appearance.theme}`);
 
