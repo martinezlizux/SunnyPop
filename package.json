@@ -1,0 +1,26 @@
+{
+  "name": "sunnypop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass scss/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinezlizux/SunnyPop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinezlizux/SunnyPop/issues"
+  },
+  "homepage": "https://github.com/martinezlizux/SunnyPop#readme",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bootstrap": "^5.3.8",
+    "sass": "^1.97.3"
+  }
+}

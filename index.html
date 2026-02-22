@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SunnyPop</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FontAwesome is imported in compiled css from npm -->
+
+  <!-- Custom CSS compiled from SCSS (Includes Bootstrap) -->
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="theme-tormenta bg-dark min-vh-100 d-flex justify-content-center align-items-center m-0">
+
+  <!-- App Wrapper Frame -->
+  <div class="iphone-frame position-relative overflow-hidden shadow-lg"
+    style="width: 402px; height: 874px; border-radius: 40px; background-color: var(--colors-forecast-background, #333a55);">
+
+    <!-- Forecast Now (Header text) -->
+    <div id="forecast-now" class="position-absolute d-flex flex-column align-items-center w-100">
+      <!-- Location -->
+      <div class="location d-flex justify-content-center align-items-center">
+        <!-- Font awesome icon for map-marker-alt -->
+        <i class="fas fa-map-marker-alt"></i>
+        <span id="location-name">Obteniendo ubicación...</span>
+      </div>
+
+      <!-- Temperature -->
+      <div class="temperature d-flex align-items-start justify-content-center mt-3">
+        <span id="current-temp" class="temp-text">--</span>
+        <span class="degree d-inline-block">°</span>
+        <div id="current-weather-icon" class="main-weather-icon ms-2"
+          style="-webkit-mask-image: url('images/forescastIcon/sun.svg'); mask-image: url('images/forescastIcon/sun.svg');">
+        </div>
+      </div>
+    </div>
+
+    <!-- Elemento (Trueno) -->
+    <!-- Positioned exactly as dev mode provided context: left 24px, top 158px -->
+    <div id="elemento" class="position-absolute">
+      <img id="elemento-img" src="images/element/trueno.svg" alt="elemento" />
+    </div>
+
+    <!-- Personaje -->
+    <div id="personaje" class="position-absolute w-100 d-flex justify-content-center">
+      <img id="personaje-img" src="images/personaje/lluvia.png" alt="personaje" />
+    </div>
+
+    <!-- Pronostico (Forecast Bar) -->
+    <div id="pronostico" class="position-absolute d-flex justify-content-between align-items-center rounded-pill">
+
+      <!-- Item 1 -->
+      <div class="forecast-item d-flex flex-column align-items-center justify-content-between h-100">
+        <div class="forecast-icon"
+          style="-webkit-mask-image: url('images/forescastIcon/sun.svg'); mask-image: url('images/forescastIcon/sun.svg');">
+        </div>
+        <span class="temp">23°</span>
+        <span class="time">4:00 pm</span>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="forecast-item d-flex flex-column align-items-center justify-content-between h-100">
+        <div class="forecast-icon"
+          style="-webkit-mask-image: url('images/forescastIcon/sun.svg'); mask-image: url('images/forescastIcon/sun.svg');">
+        </div>
+        <span class="temp">23°</span>
+        <span class="time">4:00 pm</span>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="forecast-item d-flex flex-column align-items-center justify-content-between h-100">
+        <div class="forecast-icon"
+          style="-webkit-mask-image: url('images/forescastIcon/sun.svg'); mask-image: url('images/forescastIcon/sun.svg');">
+        </div>
+        <span class="temp">23°</span>
+        <span class="time">4:00 pm</span>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="forecast-item d-flex flex-column align-items-center justify-content-between h-100">
+        <div class="forecast-icon"
+          style="-webkit-mask-image: url('images/forescastIcon/sun.svg'); mask-image: url('images/forescastIcon/sun.svg');">
+        </div>
+        <span class="temp">23°</span>
+        <span class="time">4:00 pm</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

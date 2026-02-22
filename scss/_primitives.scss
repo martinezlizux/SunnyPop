@@ -1,0 +1,159 @@
+:root {
+    /* Primitivos: Rosa */
+    --rosa-5: #ffeef8;
+    --rosa-10: #ffe2f3;
+    --rosa-20: #ffd4ed;
+    --rosa-30: #ffc6e8;
+    --rosa-40: #ffb7e2;
+    --rosa-50: #ffa9dc;
+    --rosa-60: #d48db7;
+    --rosa-70: #aa7193;
+    --rosa-80: #80556e;
+    --rosa-90: #553849;
+    --rosa-100: #33222c;
+
+    /* Primitivos: Amarillo */
+    --amarillo-5: #fff9e2;
+    --amarillo-10: #fff5cf;
+    --amarillo-20: #fff1b7;
+    --amarillo-30: #ffeca0;
+    --amarillo-40: #ffe788;
+    --amarillo-50: #ffe270;
+    --amarillo-60: #d4bc5d;
+    --amarillo-70: #aa974b;
+    --amarillo-80: #807138;
+    --amarillo-90: #554b25;
+    --amarillo-100: #332d16;
+
+    /* Primitivos: Verde */
+    --verde-5: #f3f9d5;
+    --verde-10: #ebf5b9;
+    --verde-20: #e1ef96;
+    --verde-30: #d7ea74;
+    --verde-40: #cde551;
+    --verde-50: #c3e02e;
+    --verde-60: #a2bb26;
+    --verde-70: #82951f;
+    --verde-80: #627017;
+    --verde-90: #414b0f;
+    --verde-100: #272d09;
+
+    /* Primitivos: Azul */
+    --azul-5: #e5f7f7;
+    --azul-10: #d3f1f2;
+    --azul-20: #bdeaec;
+    --azul-30: #a8e3e6;
+    --azul-40: #92dcdf;
+    --azul-50: #7cd5d9;
+    --azul-60: #67b1b5;
+    --azul-70: #538e91;
+    --azul-80: #3e6b6d;
+    --azul-90: #294748;
+    --azul-100: #192b2b;
+
+    /* Primitivos: Morado */
+    --morado-5: #eaefff;
+    --morado-10: #dde4ff;
+    --morado-20: #cbd6ff;
+    --morado-30: #bac8fe;
+    --morado-40: #a9bbfe;
+    --morado-50: #98adfe;
+    --morado-60: #7f90d4;
+    --morado-70: #6573a9;
+    --morado-80: #4c577f;
+    --morado-90: #333a55;
+    --morado-100: #1e2333;
+
+    /* Primitivos: Gray */
+    --gray-0: #ffffff;
+    --gray-5: #e9e9e9;
+    --gray-10: #dbdbdb;
+    --gray-20: #c9c9c9;
+    --gray-30: #b7b7b7;
+    --gray-40: #a5a5a5;
+    --gray-50: #939393;
+    --gray-60: #7b7b7b;
+    --gray-70: #626262;
+    --gray-80: #4a4a4a;
+    --gray-90: #313131;
+    --gray-100: #060606;
+
+    /* Default Semantic Tokens (Tormenta) */
+    --colors-forecast-background: var(--morado-90);
+    --colors-forecast-type: var(--gray-0);
+    --colors-forecast-icon: var(--morado-5);
+    --colors-forecast-colorbox: var(--morado-80);
+}
+
+/* Tokens semánticos transformados en clases de tema modulares */
+[data-theme="sol"],
+.theme-sol {
+    --colors-forecast-background: var(--amarillo-30);
+    --colors-forecast-type: var(--morado-80);
+    --colors-forecast-icon: var(--morado-50);
+    --colors-forecast-colorbox: var(--verde-40);
+}
+
+[data-theme="lluvia"],
+.theme-lluvia {
+    --colors-forecast-background: var(--azul-20);
+    --colors-forecast-type: var(--azul-80);
+    --colors-forecast-icon: var(--azul-90);
+    --colors-forecast-colorbox: var(--morado-5);
+}
+
+[data-theme="nieve"],
+.theme-nieve {
+    --colors-forecast-background: var(--morado-20);
+    --colors-forecast-type: var(--morado-60);
+    --colors-forecast-icon: var(--morado-80);
+    --colors-forecast-colorbox: var(--gray-0);
+}
+
+[data-theme="nublado"],
+.theme-nublado {
+    --colors-forecast-background: var(--morado-5);
+    --colors-forecast-type: var(--azul-80);
+    --colors-forecast-icon: var(--azul-80);
+    --colors-forecast-colorbox: var(--gray-0);
+}
+
+[data-theme="viento"],
+.theme-viento {
+    --colors-forecast-background: var(--azul-5);
+    --colors-forecast-type: var(--morado-60);
+    --colors-forecast-icon: var(--azul-70);
+    --colors-forecast-colorbox: var(--morado-5);
+}
+
+[data-theme="tormenta"],
+.theme-tormenta {
+    --colors-forecast-background: var(--morado-90);
+    --colors-forecast-type: var(--gray-0);
+    --colors-forecast-icon: var(--morado-5);
+    --colors-forecast-colorbox: var(--morado-80);
+}
+
+[data-theme="granizo"],
+.theme-granizo {
+    --colors-forecast-background: var(--azul-40);
+    --colors-forecast-type: var(--morado-100);
+    --colors-forecast-icon: var(--gray-0);
+    --colors-forecast-colorbox: var(--azul-80);
+}
+
+[data-theme="niebla"],
+.theme-niebla {
+    --colors-forecast-background: var(--morado-5);
+    --colors-forecast-type: var(--azul-80);
+    --colors-forecast-icon: var(--azul-80);
+    --colors-forecast-colorbox: var(--gray-0);
+}
+
+[data-theme="niebla-calor"],
+.theme-niebla-calor {
+    --colors-forecast-background: var(--amarillo-20);
+    --colors-forecast-type: var(--morado-80);
+    --colors-forecast-icon: var(--morado-80);
+    --colors-forecast-colorbox: var(--amarillo-40);
+}
