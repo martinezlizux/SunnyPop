@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "sass scss/main.scss css/main.css"
   },
@@ -22,5 +23,8 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "bootstrap": "^5.3.8",
     "sass": "^1.97.3"
+  },
+  "devDependencies": {
+    "vite": "^6.4.1"
   }
 }
